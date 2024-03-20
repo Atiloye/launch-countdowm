@@ -1,0 +1,158 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Body Styling */
+body {
+    background-color:  hsl(235, 16%, 14%);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 3px;
+    width: 100%;
+}
+.main-cont{
+    display: block;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Top Section Styling */
+.bg-pattern-star{
+    background-image: url(images/bg-stars.svg);    background-repeat:no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-family: "Red Hat Text", sans-serif;
+    font-optical-sizing: auto;
+    height: 75vh;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Bottom Section Styling */
+.bg-pattern-hill{
+    background-image: url(images/pattern-hills.svg);
+    background-repeat:no-repeat;
+    display: flex;
+    flex-direction: row;
+    height: 25vh;
+    justify-content: center;
+    width: 100%;
+}
+.social-icons svg{
+    margin-right: 20px;
+    transition: 0.5s;
+}
+.social-icons svg:hover{
+    cursor: pointer;
+    background-color: hsl(345, 95%, 68%);
+}
+
+/* Joint Styling */
+.hill-content,
+.star-content{
+    margin: auto;
+}
+
+/* Countdown Section Styling */
+.countdown-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+    width: 70%;
+}
+#daysDiv,
+#hoursDiv,
+#minutesDiv,
+#secondsDiv{
+    display: flex;
+    flex-direction: column;
+    height: 15rem;
+    margin: 0.3rem;
+    width: 20%;
+}
+.days-box,
+.hours-box,
+.minutes-box,
+.seconds-box{
+    background-color: hsl(236, 21%, 26%);
+    border-radius: 1rem;
+    box-shadow: 0 10px 0 0 hsl(234, 17%, 12%);
+    height: 11rem;
+}
+.days-text,
+.hours-text,
+.minutes-text,
+.seconds-text{
+    color: hsl(237, 18%, 59%);
+    display: grid;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.days-box,
+.hours-box,
+.minutes-box,
+.seconds-box{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.days-box p,
+.hours-box p,
+.minutes-box p,
+.seconds-box p{
+    display: flex;
+    font-size: 120px;
+    font-weight: bold;
+    justify-content: center;
+}
+#days,
+#hours,
+#minutes,
+#seconds{
+    color: hsl(345, 95%, 68%);
+}
+
+/* Responsive Design */
+@media screen and (max-width:375px){
+    .countdown-box{
+        display: flex;
+        flex-direction: row;
+        flex-basis: 10px;
+        margin: auto;
+        width: 100%;
+    }
+    .days-box p,
+    .hours-box p,
+    .minutes-box p,
+    .seconds-box p{
+        display: flex;
+        font-size: 60px;
+        justify-content: center;
+    }
+    .days-text,
+    .hours-text,
+    .minutes-text,
+    .seconds-text{
+        font-size: smaller;
+    }    
+    #daysDiv,
+    #hoursDiv,
+    #minutesDiv,
+    #secondsDiv{
+        display: flex;
+        flex-direction: column;
+        height: 10rem;
+        margin: 0.3rem;
+        width: 30%;
+    }
+    .days-text,
+    .hours-text,
+    .minutes-text,
+    .seconds-text{
+        margin-top: 2rem;
+    }
+}
